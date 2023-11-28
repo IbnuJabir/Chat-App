@@ -26,12 +26,11 @@ let i = 0;
     return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
 
-  // Scroll to the last message when messages change
+
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
 
-  // Function to scroll to the last message
   const scrollToBottom = () => {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
@@ -47,7 +46,7 @@ let i = 0;
     <div className="InChatNav">
       <div className="chatNav">
         <Link to="/ChatList" className="chatNavIcon">
-          <i className="fa fa-solid fa-arrow-left"></i>
+        <i className="fa fa-solid fa-arrow-left"></i>
         </Link>
         <img src={profile_pic} className="profile-pic" alt="profile" />
         <h3 className="person">Ibnu Jabir</h3>
